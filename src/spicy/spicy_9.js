@@ -224,7 +224,7 @@ export const anEvenIsOdd = (arr) => {
  */
 export const hasExactly = (arr, test, n) => {
     let i = filter(arr,test);
-    if(i==n){
+    if(i-n==0){
         return true;
     }
     else{
