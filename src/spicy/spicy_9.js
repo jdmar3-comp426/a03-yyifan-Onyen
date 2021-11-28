@@ -16,6 +16,7 @@
  */
 export const repeat = (fn, n, ...params) => {
     const result=[];
+    
     for(let i=0; i<n; i++){
         result[i]=fn(...params);
     }
@@ -27,8 +28,15 @@ export const repeat = (fn, n, ...params) => {
  * Use the repeat function to log the string "Hello, world!" to the console
  *   10 times.
  */
+
+
+
+
 export const repeatDemo = () => {
-    repeat(console.log("Hello, world!"),10,[]);
+    function fn(){
+        console.log("Hello, world!");
+    }
+    repeat(fn,10,[]);
 };
 
 
@@ -45,7 +53,10 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
-
+    function multiplyBy2(num2) {
+        return num1 * num2;
+    }
+    return multiplyBy2;
 };
 
 
