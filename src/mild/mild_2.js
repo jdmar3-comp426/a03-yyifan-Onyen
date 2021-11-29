@@ -48,7 +48,8 @@ return final;
  obj now does not contain the `password` field
  */
 export function removeKey(object, key) {
-
+   delete object[key];
+   return object;
 }
 
 /**
@@ -68,8 +69,14 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-   delete object[key];
-   return object;
+   const copy=[];
+   for(let i =0; i<object.length; i++){
+      copy[i]=object[i];
+   }
+   for(let i=0; i< keyList.length; i++){
+      removeKeyNonDestructive(copy,keyList[i]);
+   }
+   return copy;
 }
 
 /**
@@ -94,12 +101,5 @@ export function removeKeyNonDestructive(object, key) {
  * @return {*} The object with its keys removed.
  */
 export function removeKeys(object, keyList) {
-   const copy=[];
-   for(let i =0; i<object.length; i++){
-      copy[i]=object[i];
-   }
-   for(let i=0; i< keyList.length; i++){
-      removeKeyNonDestructive(copy,keyList[i]);
-   }
-   return copy;
+   
 }
