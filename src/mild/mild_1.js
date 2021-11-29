@@ -48,7 +48,7 @@ export function maxAndMin(numbers) {
         if(min>numbers[i]){
             min=numbers[i];
         }
-        return {min: min, max: max};
+        return {max: max, min: min};
     }
 }
 
