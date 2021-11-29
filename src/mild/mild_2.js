@@ -24,6 +24,7 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
+const result= [];
 
 }
 
