@@ -73,8 +73,8 @@ export function removeKeyNonDestructive(object, key) {
    for(let i =0; i<object.length; i++){
       copy[i]=object[i];
    }
-   for(let i=0; i< keyList.length; i++){
-      removeKeyNonDestructive(copy,keyList[i]);
+   for(let i=0; i< key.length; i++){
+      removeKeyNonDestructive(copy,key[i]);
    }
    return copy;
 }
