@@ -28,13 +28,13 @@ export function getSum(array) {
 export function getMedian(array) {
     array.sort(function(a, b){return a-b});
     if(array.length%2==0){
-        let a = array.length/2;
-        let b = a - 1;
-        let medium = (array[a]+array[b])/2;
+        const a = array.length/2;
+        const b = a - 1;
+        const medium = (array[a]+array[b])/2;
     }
     else{
-        let a = (array.length+1)/2;
-        let medium = array[a-1];
+        const a = (array.length+1)/2;
+        const medium = array[a-1];
     }
     return medium;
 }
