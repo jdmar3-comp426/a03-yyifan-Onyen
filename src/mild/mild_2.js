@@ -69,10 +69,7 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-   const copy=[];
-  for(let i =0; i<object.length; i++){
-    copy[i]=object[i];
-  }
+   let copy = JSON.parse(JSON.stringify(object));
    delete copy[key];
    return copy;
 }
@@ -103,7 +100,7 @@ export function removeKeys(object, keyList) {
    //for(let i =0; i<object.length; i++){
    //   copy[i]=object[i];
   // }
-  const copy = object.slice();
+  let copy = JSON.parse(JSON.stringify(object));
    for(let i=0; i< keyList.length; i++){
       delete copy[keyList[i]];
    }
