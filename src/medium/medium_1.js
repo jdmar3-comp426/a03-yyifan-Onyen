@@ -34,7 +34,7 @@ export function getMedian(array) {
     }
     else{
         let a = (array.length+1)/2;
-        let medium = array[a+1];
+        let medium = array[a-1];
     }
     return medium;
 }
