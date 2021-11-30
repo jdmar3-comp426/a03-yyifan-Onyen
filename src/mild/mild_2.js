@@ -73,7 +73,7 @@ export function removeKeyNonDestructive(object, key) {
   // for(let i =0; i<object.length; i++){
     //  copy[i]=object[i];
   // }
-  let copy = object.slice()
+  const copy = object.slice()
    delete copy[key];
    return copy;
 }
@@ -104,7 +104,7 @@ export function removeKeys(object, keyList) {
    //for(let i =0; i<object.length; i++){
    //   copy[i]=object[i];
   // }
-  let copy = object.slice();
+  const copy = object.slice();
    for(let i=0; i< keyList.length; i++){
       delete copy[keyList[i]];
    }
