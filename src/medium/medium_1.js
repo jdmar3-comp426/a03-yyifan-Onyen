@@ -80,6 +80,6 @@ export function getStatistics(array) {
     }
     variance = variance / array.length;
     let stand = Math.sqrt(variance);
-    return {min: min, median: median, max: max, variance: variance, mean: mean, length: length, sum: sum, standard_deviation: stand};
+    return {length: length, sum: sum, mean: mean, median: median, min: min, max: max, variance: variance, standard_deviation: stand};
 }
 
