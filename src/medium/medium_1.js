@@ -44,7 +44,7 @@ export function getMedian(array) {
     if(array.length%2){
         return array[mid];
     }
-    return (array[mid - 1] + values[half]) / 2.0;
+    return (array[mid - 1] + array[mid]) / 2.0;
 }
 
 /**
