@@ -69,11 +69,10 @@ export function removeKey(object, key) {
  If only `removeKeyNonDestructive` was called, nothing would have changed.
  */
 export function removeKeyNonDestructive(object, key) {
-   //let copy=[];
-  // for(let i =0; i<object.length; i++){
-    //  copy[i]=object[i];
-  // }
-  const copy = object.slice()
+   const copy=[];
+  for(let i =0; i<object.length; i++){
+    copy[i]=object[i];
+  }
    delete copy[key];
    return copy;
 }
