@@ -73,7 +73,7 @@ export function countArray(array) {
         if(array[i]==array[i+1])
         count++;
     else{
-        result.array[count2]=count;
+        result[array[count2]]=count;
         count2++;
         count = 1;
     }
