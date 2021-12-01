@@ -63,8 +63,9 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    var set = new Set();
-    array.map(item => set.add(item));
+    //const set = new Set();
+    //array.map(item => set.add(item));
+    const set = [...new Set(array)];
     const result = {};
     for(let i =0; i< set.length; i++){
 
