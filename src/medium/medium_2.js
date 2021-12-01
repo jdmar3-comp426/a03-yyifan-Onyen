@@ -54,7 +54,7 @@ export function helper3(array){
     let nothyrid =0;
     for(let i =0; i<array.length;i++){
         if(array[i].hybrid==true){
-            hyrid++;
+            hybrid++;
         }
         else{
             nothyrid++;
