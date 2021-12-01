@@ -122,6 +122,13 @@ export function helper3(array){
  * }
  */
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: helper4(mpg_data),
+    avgMpgByYearAndHybrid: helper4(mpg_data)
+};
+export function helper4(array){
+
+};
+
+export function helper5(array){
+
 };
