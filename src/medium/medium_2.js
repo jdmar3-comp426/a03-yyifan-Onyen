@@ -40,6 +40,15 @@ export function helper1(array) {
     return result;
 }
 
+export function helper2(array) {
+    return getStatistics(array.year);
+}
+
+
+export function helper3(array){
+
+}
+
 
 /**
  * HINT: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
