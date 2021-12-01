@@ -41,7 +41,11 @@ export function helper1(array) {
 }
 
 export function helper2(array) {
-    return getStatistics(array.year);
+    let result = [];
+    for(let i =0; i< array.length; i++){
+        result.push(array[i].year);
+    }
+    return getStatistics(result);
 }
 
 
