@@ -63,21 +63,14 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    const result = new Object();
-    array.sort(function(a, b){
-        return a-b
-    });
-    let count =1;
-    let count2=0;
-    for(let i =0; i<array.length;i++){
-        if(array[i]==array[i+1])
-        count++;
-    else{
-        result["array[count2]"]=count;
-        count2++;
-        count = 1;
+    var set = new Set();
+    array.map(item => set.add(item));
+    const result = {};
+    for(let i =0; i< set.length; i++){
+
+result[set[i]]=array.filter(x=> x==set[i]).length;
+
     }
-}
-return result;
-    
+    return result;
+
 }
