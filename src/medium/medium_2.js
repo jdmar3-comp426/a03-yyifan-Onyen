@@ -20,10 +20,25 @@ see under the methods section
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
 export const allCarStats = {
-    avgMpg: undefined,
+    avgMpg: helper1(mpg_data),
     allYearStats: undefined,
     ratioHybrids: undefined,
 };
+export function helper1(array) {
+    let sum = 0;
+    for(let i =0; i < array.length; i++){
+        sum=sum+array[i].city_mpg;
+    }
+    sum = sum / (array.length);
+
+    let sum2 = 0;
+    for(let i =0; i < array.length; i++){
+        sum2=sum2+array[i].highway_mpg;
+    }
+    sum2= sum2 / (array.length);
+    const result = {city: sum1, highway: sum2};
+    return result;
+}
 
 
 /**
