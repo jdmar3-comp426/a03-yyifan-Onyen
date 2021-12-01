@@ -21,7 +21,7 @@ see under the methods section
  */
 export const allCarStats = {
     avgMpg: helper1(mpg_data),
-    allYearStats: undefined,
+    allYearStats:  helper2(mpg_data),
     ratioHybrids: undefined,
 };
 export function helper1(array) {
