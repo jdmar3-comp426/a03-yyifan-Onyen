@@ -36,7 +36,7 @@ export function helper1(array) {
         sum2=sum2+array[i].highway_mpg;
     }
     sum2= sum2 / (array.length);
-    const result = {city: sum1, highway: sum2};
+    const result = {city: sum, highway: sum2};
     return result;
 }
 
