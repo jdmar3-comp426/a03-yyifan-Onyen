@@ -22,7 +22,7 @@ see under the methods section
 export const allCarStats = {
     avgMpg: helper1(mpg_data),
     allYearStats:  helper2(mpg_data),
-    ratioHybrids: undefined,
+    ratioHybrids: helper3(mpg_data),
 };
 export function helper1(array) {
     let sum = 0;
@@ -50,7 +50,17 @@ export function helper2(array) {
 
 
 export function helper3(array){
-
+    let hybrid = 0;
+    let nothyrid =0;
+    for(let i =0; i<array.length;i++){
+        if(array[i].hybrid==true){
+            hyrid++;
+        }
+        else{
+            nothyrid++;
+        }
+    }
+    return hybrid/(hybrid+nothyrid);
 }
 
 
