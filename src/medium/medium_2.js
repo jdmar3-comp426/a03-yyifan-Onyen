@@ -20,10 +20,48 @@ see under the methods section
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: helper1(mpg_data),
+    allYearStats:  helper2(mpg_data),
+    ratioHybrids: helper3(mpg_data),
 };
+export function helper1(array) {
+    let sum = 0;
+    for(let i =0; i < array.length; i++){
+        sum=sum+array[i].city_mpg;
+    }
+    sum = sum / (array.length);
+
+    let sum2 = 0;
+    for(let i =0; i < array.length; i++){
+        sum2=sum2+array[i].highway_mpg;
+    }
+    sum2= sum2 / (array.length);
+    const result = {city: sum, highway: sum2};
+    return result;
+}
+
+export function helper2(array) {
+    let result = [];
+    for(let i =0; i< array.length; i++){
+        result.push(array[i].year);
+    }
+    return getStatistics(result);
+}
+
+
+export function helper3(array){
+    let hybrid = 0;
+    let nothyrid =0;
+    for(let i =0; i<array.length;i++){
+        if(array[i].hybrid==true){
+            hybrid++;
+        }
+        else{
+            nothyrid++;
+        }
+    }
+    return hybrid/(hybrid+nothyrid);
+}
 
 
 /**
@@ -84,6 +122,13 @@ export const allCarStats = {
  * }
  */
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: helper4(mpg_data),
+    avgMpgByYearAndHybrid: helper4(mpg_data)
+};
+export function helper4(array){
+
+};
+
+export function helper5(array){
+
 };

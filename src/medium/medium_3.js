@@ -18,6 +18,16 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
+    let combine=[];
+    for(let i =0; i< car_data.length; i++){
+        if(car_data[i].horsepower>= minHorsepower && car_data[i].minTorque>=minTorque){
+            combine.push(car_data[i]);
+        }
+    }
+    combine.sort(function(a, b){
+        return a.horsepower-b.horsepower;
+    });
+    return combine;
 
 }
 
@@ -59,5 +69,4 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
 }
